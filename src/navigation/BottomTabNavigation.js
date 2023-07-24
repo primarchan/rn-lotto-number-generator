@@ -14,8 +14,8 @@ export const BottomTabNavigation = () => {
           headerShown: false,
           tabBarIcon: ({ color }) => {
             const getIconName = () => {
-              if (route.name === "History") return "time";
               if (route.name === "Home") return "home";
+              if (route.name === "History") return "time";
             };
             const iconName = getIconName();
             return <TabIcon iconName={iconName} iconColor={color} />;
