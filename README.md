@@ -7,3 +7,5 @@
 - `npm install react-native-screens react-native-safe-area-context --save`
 - `npm install @react-navigation/bottom-tabs --save`
 - `npm install redux redux-logger react-redux --save`
+- `npm install redux-persist --save`
+- `npm install @react-native-async-storage/async-storage --save`
