@@ -1,5 +1,6 @@
-import { useCallback, useState } from "react";
 import { View } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
+import { useCallback, useState } from "react";
 
 import { Button } from "../components/Button";
 import { Spacer } from "../components/Spacer";
@@ -7,13 +8,18 @@ import { getRandomSixNumber } from "../utils/Utils";
 import { Header } from "../components/Header/Header";
 import { Typography } from "../components/Typography";
 import { LottoNumberView } from "../components/LottoNumberView";
+import { createNewNumbers } from "../actions/lottoNumbers";
 
 export const HomeScreen = (props) => {
-  const [numbers, setNumbers] = useState([]);
+  const numbers = useSelector((state) => state.numbers.currentNumber);
+  // const [numbers, setNumbers] = useState([]);
+
+  const dispatch = useDispatch();
 
   const onPressGetNumber = useCallback(() => {
-    const randomNumbers = getRandomSixNumber();
-    setNumbers(randomNumbers);
+    // const randomNumbers = getRandomSixNumber();
+    // setNumbers(randomNumbers);
+    dispatch(createNewNumbers());
   }, []);
 
   return (

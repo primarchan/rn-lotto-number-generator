@@ -8,12 +8,17 @@ export const LottoNumberView = (props) => {
   const [animatedValue] = useState(new Animated.Value(1));
 
   const getNumberBackgroundColor = useCallback(() => {
-    const randomNumber = Math.floor(Math.random() * 10) % 6;
+    const randomNumber = Math.floor(Math.random() * 10);
     if (randomNumber === 0) return "red";
-    if (randomNumber === 1) return "blue";
+    if (randomNumber === 1) return "orange";
     if (randomNumber === 2) return "gray";
     if (randomNumber === 3) return "green";
-    if (randomNumber === 4) return "purple";
+    if (randomNumber === 4) return "blue";
+    if (randomNumber === 5) return "purple";
+    if (randomNumber === 6) return "navy";
+    if (randomNumber === 7) return "light green";
+    if (randomNumber === 8) return "pink";
+    if (randomNumber === 8) return "skyblue";
     return "black";
   }, []);
 

@@ -3,14 +3,17 @@ import { Header } from "../components/Header/Header";
 import { View, FlatList } from "react-native";
 import { Typography } from "../components/Typography";
 import { LottoNumberView } from "../components/LottoNumberView";
+import { useSelector } from "react-redux";
 
 export const HistoryListScreen = () => {
-  const [history] = useState([
-    { date: new Date(), numbers: [1, 2, 3, 4, 5, 6] },
-    { date: new Date(), numbers: [1, 2, 3, 4, 5, 6] },
-    { date: new Date(), numbers: [1, 2, 3, 4, 5, 6] },
-    { date: new Date(), numbers: [1, 2, 3, 4, 5, 6] },
-  ]);
+  // const [history] = useState([
+  //   { date: new Date(), numbers: [1, 2, 3, 4, 5, 6] },
+  //   { date: new Date(), numbers: [1, 2, 3, 4, 5, 6] },
+  //   { date: new Date(), numbers: [1, 2, 3, 4, 5, 6] },
+  //   { date: new Date(), numbers: [1, 2, 3, 4, 5, 6] },
+  // ]);
+
+  const history = useSelector((state) => state.numbers.history);
 
   return (
     <View style={{ flex: 1 }}>
