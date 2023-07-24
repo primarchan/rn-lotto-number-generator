@@ -5,16 +5,6 @@ import { Typography } from "../components/Typography";
 import { LottoNumberView } from "../components/LottoNumberView";
 
 export const HistoryListScreen = () => {
-  const getNumberBackgroudColor = useCallback(() => {
-    const randomNumber = Math.floor(Math.random() * 10) % 6;
-    if (randomNumber === 0) return "red";
-    if (randomNumber === 1) return "blue";
-    if (randomNumber === 2) return "gray";
-    if (randomNumber === 3) return "green";
-    if (randomNumber === 4) return "purple";
-    return "black";
-  }, []);
-
   const [history] = useState([
     { date: new Date(), numbers: [1, 2, 3, 4, 5, 6] },
     { date: new Date(), numbers: [1, 2, 3, 4, 5, 6] },
